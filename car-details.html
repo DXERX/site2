@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل السيارة | موقع مزادات السيارات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-car"></i> مزاد السيارات</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="auctions.html"><i class="fas fa-gavel"></i> المزادات</a></li>
+                    <li><a href="login.html"><i class="fas fa-user"></i> تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="car-details">
+            <div class="car-gallery">
+                <div class="main-image">
+                    <img id="mainCarImage" src="images/cars/toyota-camry.jpg" alt="سيارة تويوتا كامري">
+                </div>
+                <div class="thumbnails">
+                    <img src="images/cars/toyota-camry-1.jpg" alt="صورة 1" onclick="changeImage(this)">
+                    <img src="images/cars/toyota-camry-2.jpg" alt="صورة 2" onclick="changeImage(this)">
+                    <img src="images/cars/toyota-camry-3.jpg" alt="صورة 3" onclick="changeImage(this)">
+                </div>
+            </div>
+
+            <div class="car-info">
+                <h1 id="carTitle">تويوتا كامري 2020</h1>
+                <div class="car-meta">
+                    <span><i class="fas fa-calendar-alt"></i> السنة: 2020</span>
+                    <span><i class="fas fa-tachometer-alt"></i> المسافة: 45,000 كم</span>
+                    <span><i class="fas fa-gas-pump"></i> الوقود: بنزين</span>
+                </div>
+
+                <div class="auction-info">
+                    <h2>معلومات المزاد</h2>
+                    <div class="auction-timer">
+                        <i class="fas fa-clock"></i> وقت متبقي: <span id="countdown">2 يوم 4 ساعة 30 دقيقة</span>
+                    </div>
+                    <div class="current-bid">
+                        <i class="fas fa-hand-holding-usd"></i> السعر الحالي: <span>85,000 ر.س</span>
+                    </div>
+                    <div class="bids-count">
+                        <i class="fas fa-gavel"></i> عدد المزايدات: <span>12</span>
+                    </div>
+                </div>
+
+                <div class="bid-form">
+                    <h2>قدم مزايدتك</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="bidAmount">المبلغ (ر.س)</label>
+                            <input type="number" id="bidAmount" min="86000" value="86000" required>
+                        </div>
+                        <button type="submit" class="btn primary"><i class="fas fa-gavel"></i> تقديم المزايدة</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="car-specs">
+            <h2><i class="fas fa-list-alt"></i> مواصفات السيارة</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h3>المحرك</h3>
+                    <p>2.5 لتر، 4 سلندر، 203 حصان</p>
+                </div>
+                <div class="spec-item">
+                    <h3>ناقل الحركة</h3>
+                    <p>أوتوماتيك - 8 سرعات</p>
+                </div>
+                <div class="spec-item">
+                    <h3>اللون</h3>
+                    <p>أبيض لؤلؤي</p>
+                </div>
+                <div class="spec-item">
+                    <h3>المواصفات</h3>
+                    <p>كامل المواصفات، شاشة لمس، كاميرا خلفية، مقاعد جلد</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- نفس الفوتر الموجود في index.html -->
+    </footer>
+
+    <script>
+        function changeImage(img) {
+            document.getElementById('mainCarImage').src = img.src;
+        }
+    </script>
+</body>
+</html>

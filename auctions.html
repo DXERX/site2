@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المزادات الحالية | موقع مزادات السيارات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-car"></i> مزاد السيارات</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="auctions.html" class="active"><i class="fas fa-gavel"></i> المزادات</a></li>
+                    <li><a href="login.html"><i class="fas fa-user"></i> تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="auctions-header">
+            <h1><i class="fas fa-gavel"></i> المزادات الحالية</h1>
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="ابحث عن سيارة...">
+                <select id="filterSelect">
+                    <option value="all">جميع الفئات</option>
+                    <option value="sedan">سيدان</option>
+                    <option value="suv">SUV</option>
+                    <option value="truck">شاحنة</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="auctions-list">
+            <div class="auctions-grid" id="auctionsGrid">
+                <!-- يتم تعبئتها بواسطة JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- نفس الفوتر الموجود في index.html -->
+    </footer>
+
+    <script src="js/auctions.js"></script>
+</body>
+</html>
